@@ -1,0 +1,289 @@
+.test-integration {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.test-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 0 48px;
+}
+
+.test-header h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.test-header p {
+  color: #666;
+}
+
+.url-input-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.input-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.globe-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.url-input {
+  width: 100%;
+  padding: 12px 12px 12px 36px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.url-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.test-button {
+  padding: 0 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  min-width: 120px;
+}
+
+.test-button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.test-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success View Styles */
+.success-view {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.success-content {
+  position: relative;
+  z-index: 2;
+}
+
+.success-content h2 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.primary-button {
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.primary-button:hover {
+  background-color: #1d4ed8;
+}
+
+.social-share {
+  margin-top: 40px;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.social-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+}
+
+.social-button.twitter {
+  background-color: #1da1f2;
+}
+
+.social-button.linkedin {
+  background-color: #0077b5;
+}
+
+.social-button.facebook {
+  background-color: #1877f2;
+}
+
+/* Confetti Animation */
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #2563eb;
+  top: -20px;
+  left: var(--position);
+  transform: rotate(var(--rotation));
+  animation: fall 3s linear infinite;
+  animation-delay: var(--delay);
+}
+
+.confetti-piece:nth-child(4n) {
+  background-color: #ef4444;
+  width: 8px;
+  height: 8px;
+}
+
+.confetti-piece:nth-child(4n + 1) {
+  background-color: #22c55e;
+  width: 12px;
+  height: 12px;
+}
+
+.confetti-piece:nth-child(4n + 2) {
+  background-color: #eab308;
+  width: 15px;
+  height: 15px;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(var(--rotation));
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20vh) rotate(calc(var(--rotation) * 5));
+    opacity: 0;
+  }
+}
+
+/* Failure View Styles */
+.failure-view {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.failure-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.failure-content h2 {
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.failure-content ul {
+  text-align: left;
+  margin: 24px 0;
+  padding-left: 20px;
+}
+
+.failure-content li {
+  margin-bottom: 8px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .url-input-container {
+    flex-direction: column;
+  }
+
+  .test-button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .social-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+.header-with-back {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.back-button {
+  background: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+
+.back-button:hover {
+  color: #2563eb;
+}

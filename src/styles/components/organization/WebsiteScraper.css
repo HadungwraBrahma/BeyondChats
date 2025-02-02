@@ -1,0 +1,24 @@
+.website-scraper {
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.scraping-progress {
+  height: 8px;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.status-text {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}

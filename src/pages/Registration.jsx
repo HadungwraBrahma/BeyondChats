@@ -2,7 +2,7 @@ import { useState } from "react";
 import LoginForm from "../components/auth/LoginForm";
 import GoogleSignIn from "../components/auth/GoogleSignIn";
 import EmailVerification from "../components/auth/EmailVerification";
-import "../styles/pages/registration.css";
+import "../styles/pages/Registration.css";
 
 const Registration = ({ onNext, onUserData }) => {
   const [verificationNeeded, setVerificationNeeded] = useState(false);
